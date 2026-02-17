@@ -32,7 +32,7 @@ function ProcessingOptions({ file, analysisData, options, setOptions, onProcessi
     }
 
     try {
-      const response = await axios.post(`${API_URL}/process`, formData, {
+      const response = await axios.post(`${API_URL}/api/process`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

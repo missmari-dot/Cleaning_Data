@@ -11,6 +11,7 @@ function FileUpload({ onFileUpload, onAnalysisComplete }) {
 
   const handleDragOver = useCallback((e) => {
     e.preventDefault();
+
     setIsDragging(true);
   }, []);
 
@@ -59,7 +60,7 @@ function FileUpload({ onFileUpload, onAnalysisComplete }) {
     formData.append('file', file);
 
     try {
-      const response = await axios.post(`${API_URL}/analyze`, formData, {
+      const response = await axios.post(`${API_URL}/api/analyze`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
